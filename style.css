@@ -10,10 +10,7 @@ body {
     font-family: "Heebo", sans-serif;
     margin: unset;
 }
-img {
-    display: block;
-}
-h2, h3 {
+h2, h3, p {
     margin: unset;
     padding: unset;
 }
@@ -57,14 +54,36 @@ p {
 br.pc {
     display: none;
 }
-div.img {
-    
+img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
 }
 
 
 /* 広い画面向けの CSS */
 @media (min-width: 900px) {
+    main {
+        margin-bottom: 100px;
+        overflow: hidden;
+    }
+    div.text {
+        padding: 0 0 0 60px;
+        /* width: 35%; */
+        float: left;
+        position: absolute;
+        z-index: 1;
+    }
+    h2 {
+        margin-top: 60px;
+        font-size: 70px;
+    }
     br.pc {
         display: block;
+    }
+    img {
+        width: 65%;
+        float: right;
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
     }
 }
